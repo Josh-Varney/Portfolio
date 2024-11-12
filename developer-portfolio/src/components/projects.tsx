@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaArrowLeft } from 'react-icons/fa';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 // Data for Projects
 const projects = [
@@ -17,7 +19,7 @@ const projects = [
     description: 'A decentralized application leveraging blockchain technology to tokenize real estate assets. Using Solidity for smart contracts and React with a Tailwind frontend, the platform ensures secure, transparent ownership transactions. Firebase and Google Cloud are used for scalable, real-time backend services.',
     techStack: ['React', 'Tailwind', 'GitHub Workflows', 'Solidity', 'Ethereum', 'TypeScript', 'Google Cloud', 'Firebase', 'CI/CD'],
     image: 'block.png',
-    link: '#',
+    link: 'https://github.com/Josh-Varney/EstateChain',
     type: 'Personal Project',
     view: true
   },
@@ -53,7 +55,7 @@ const projects = [
     description: 'Implemented machine learning models (RESNETv2, VGG19) using TensorFlow for highly accurate face detection and recognition, including distinguishing between masked and unmasked faces. Focused on analytics and ML model testing to optimize recognition performance in real-world scenarios.',
     techStack: ['TensorFlow', 'Python', 'GPU Computing', 'Numpy', 'GA', 'Analytics', 'Matplotlib', 'Complex Mathematics'],
     image: 'res2.png',
-    link: '#',
+    link: 'https://github.com/Josh-Varney/facialRecognition',
     type: 'Personal Project',
     view: true
   },
@@ -71,7 +73,7 @@ const projects = [
       "Flask"
     ],
     image: "euclidean_keybased.png",
-    link: "#",
+    link: "https://github.com/Josh-Varney/movieRecommendationSystem",
     type: "Personal Project",
     view: true
   },
@@ -89,7 +91,7 @@ const projects = [
       "Seaborn"
     ],
     image: "stocks.png",
-    link: "#",
+    link: "https://github.com/Josh-Varney/MachineL",
     type: "Personal Project",
     view: true
   }
@@ -97,6 +99,7 @@ const projects = [
 
 
 const Projects: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <section className="relative min-h-screen p-10 bg-gradient-to-br from-gray-800 via-gray-900 to-black text-white overflow-hidden">
       {/* Animated Background Elements */}
@@ -104,6 +107,18 @@ const Projects: React.FC = () => {
         <div className="w-[700px] h-[700px] rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-20 animate-pulse blur-3xl"></div>
         <div className="w-[600px] h-[600px] rounded-full bg-gradient-to-r from-teal-500 via-green-400 to-blue-500 opacity-15 animate-bounce blur-2xl"></div>
         <div className="w-[500px] h-[500px] rounded-full bg-gradient-to-r from-pink-400 via-red-400 to-yellow-400 opacity-10 animate-pulse blur-xl"></div>
+      </div>
+      
+      <div>
+        <button
+          onClick={() => {
+            console.log("Button clicked"); // Debugging log
+            navigate('/');
+          }}
+          className="absolute top-6 left-6 px-4 py-2 rounded-full bg-gradient-to-r from-teal-400 to-blue-500 text-white font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-transform flex items-center gap-2"
+        >
+          <FaArrowLeft />
+        </button>
       </div>
 
       <h1 className="z-10 text-5xl font-extrabold mb-10 text-center text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-purple-400 to-pink-500">

@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+import { FaArrowLeft } from 'react-icons/fa';
 
 // Data for Journey
 const journey = [
@@ -55,6 +57,7 @@ const journey = [
 ];
 
 const Journey: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <section className="relative min-h-screen p-10 bg-gradient-to-br from-gray-800 via-gray-900 to-black text-white overflow-hidden">
       {/* Animated Background Elements */}
@@ -63,6 +66,19 @@ const Journey: React.FC = () => {
         <div className="w-[600px] h-[600px] rounded-full bg-gradient-to-r from-teal-500 via-green-400 to-blue-500 opacity-15 animate-bounce blur-2xl"></div>
         <div className="w-[500px] h-[500px] rounded-full bg-gradient-to-r from-pink-400 via-red-400 to-yellow-400 opacity-10 animate-pulse blur-xl"></div>
       </div>
+      <div>
+
+        <button
+          onClick={() => {
+            console.log("Button clicked"); // Debugging log
+            navigate('/');
+          }}
+          className="absolute top-6 left-6 px-4 py-2 rounded-full bg-gradient-to-r from-teal-400 to-blue-500 text-white font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-transform flex items-center gap-2"
+        >
+          <FaArrowLeft />
+        </button>
+      </div>
+
 
       <h1 className="z-10 text-5xl font-extrabold mb-10 text-center text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-purple-400 to-pink-500">
         My Journey

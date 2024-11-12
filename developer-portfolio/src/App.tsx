@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import Home from './components/home';
 import Projects from './components/projects';
 import Journey from './components/journey';
@@ -7,6 +7,7 @@ import Journey from './components/journey';
 const App: React.FC = () => {
   return (
     <Router>
+      <InitializeRedirect />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
@@ -14,6 +15,17 @@ const App: React.FC = () => {
       </Routes>
     </Router>
   );
+};
+
+// Component that handles the redirect on load
+const InitializeRedirect: React.FC = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate('/'); // Redirect to Home ("/") path
+  }, [navigate]);
+
+  return null;
 };
 
 export default App;
