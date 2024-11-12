@@ -4,54 +4,97 @@ import { motion } from 'framer-motion';
 // Data for Projects
 const projects = [
   {
-    title: 'Blockchain Real Estate Tokenization',
-    description: 'A blockchain-based application for secure real estate tokenization using Solidity smart contracts and React.',
-    techStack: ['React', 'Solidity', 'Ethereum', 'TypeScript'],
-    image: '/images/blockchain-app.jpg',
-    link: '#',
-    type: 'Personal Project',
-  },
-  {
-    title: 'Facial Recognition System',
-    description: 'Machine learning model using TensorFlow for accurate recognition of masked and unmasked faces.',
-    techStack: ['TensorFlow', 'Python', 'GPU Computing'],
-    image: '/images/facial-recognition.jpg',
-    link: '#',
-    type: 'Personal Project',
-  },
-  {
-    title: 'Sustainable Recipe App',
-    description: 'An iOS app that suggests recipes based on available ingredients, promoting sustainability and reducing food waste.',
-    techStack: ['Dart', 'Flutter', 'iOS'],
-    image: '/images/recipe-app.jpg',
-    link: '#',
-    type: 'Personal Project',
-  },
-  {
     title: 'Automotive Process Comparison Tool',
-    description: 'A full-stack tool to manage and compare networking processes across multiple environments for major financial asset managers.',
-    techStack: ['React', 'Node.js', 'Flask', 'SQL Server', 'GitLab'],
-    image: '/images/automotive-tool.jpg',
+    description: 'A full-stack tool designed to automate and streamline the comparison of complex process configurations across different company environments (Production, Staging, and Dev). Built using SQL Server, this tool integrates with multiple environments to optimize the comparison process and ensure consistent results across platforms.',
+    techStack: ['React', 'Node.js', 'Flask', 'Jinja2', 'SQL Server', 'GitLab', 'SPs', 'API Development'],
+    image: 'tradeweb3.png',
     link: '#',
     type: 'Company Project',
+    view: false
+  },
+  {
+    title: 'Blockchain Real Estate Tokenization',
+    description: 'A decentralized application leveraging blockchain technology to tokenize real estate assets. Using Solidity for smart contracts and React with a Tailwind frontend, the platform ensures secure, transparent ownership transactions. Firebase and Google Cloud are used for scalable, real-time backend services.',
+    techStack: ['React', 'Tailwind', 'GitHub Workflows', 'Solidity', 'Ethereum', 'TypeScript', 'Google Cloud', 'Firebase', 'CI/CD'],
+    image: 'block.png',
+    link: '#',
+    type: 'Personal Project',
+    view: true
   },
   {
     title: 'CentreForms CRM Enhancement',
-    description: 'Developed middleware for data synchronization between Microsoft Dynamics and Firebase, with a responsive UI using React and Tailwind CSS.',
-    techStack: ['React', 'TypeScript', 'Firebase', 'AWS', 'PHPMyAdmin'],
-    image: '/images/crm-enhancement.jpg',
+    description: 'Improved a live CRM system deployed on AWS by enhancing performance and optimizing the user experience. Managed backend updates using PHP and PHPMyAdmin, while integrating Angular and React components to deliver a modern, dynamic UI. Ensured seamless local testing with XAMPP and Virtual Hosts.',
+    techStack: ['React', 'Angular', 'PHP', 'Bootstrap', 'AWS EC2 Linux', 'PHPMyAdmin', 'Docker'],
+    image: 'cf.png',
     link: '#',
     type: 'Company Project',
+    view: false
   },
   {
-    title: 'Internal Process Automation at Tradeweb',
-    description: 'Automated internal company processes using Python, React, and Docker, improving efficiency for EU support teams.',
-    techStack: ['Python', 'React', 'Docker', 'Kubernetes', 'SQL'],
-    image: '/images/process-automation.jpg',
+    title: 'TradeFlow Optimiser',
+    description: 'A middleware platform built to optimize and secure API requests for international trading teams. This solution enhances request efficiency, improves resource management, and ensures scalability and security across the system, supporting real-time trading operations.',
+    techStack: ['Python', 'React', 'Docker', 'Kubernetes', 'SQL', 'Angular', 'API Management', 'RESTAPIs', 'Efficient Solutions', 'Testing Solutions'],
+    image: 'trade1.png',
     link: '#',
     type: 'Company Project',
+    view: false
   },
+  {
+    title: 'Valid8ta Project',
+    description: 'Developed a React and TypeScript app to upload, validate, and manage CSV data, integrating seamlessly with Microsoft Dataverse. Designed and implemented CI/CD pipelines with cached tests to accelerate build times and ensure smooth, consistent deployments.',
+    techStack: ['React', 'TypeScript', 'Firebase', 'Dynamics 365', 'Data Management', 'Microsoft Azure', 'Dataverse'],
+    image: 'wasteaway.png',
+    link: '#',
+    type: 'Company Project',
+    view: false
+  },
+  {
+    title: 'Facial Recognition System',
+    description: 'Implemented machine learning models (RESNETv2, VGG19) using TensorFlow for highly accurate face detection and recognition, including distinguishing between masked and unmasked faces. Focused on analytics and ML model testing to optimize recognition performance in real-world scenarios.',
+    techStack: ['TensorFlow', 'Python', 'GPU Computing', 'Numpy', 'GA', 'Analytics', 'Matplotlib', 'Complex Mathematics'],
+    image: 'res2.png',
+    link: '#',
+    type: 'Personal Project',
+    view: true
+  },
+  {
+    title: "Movie Recommendation System",
+    description: "Developed a recommendation system using content-based filtering and collaborative filtering techniques to suggest movies to users based on their preferences. Leveraged Python libraries like Pandas, Scikit-learn, and Numpy to analyze features such as genre, cast, and ratings for personalized movie recommendations.",
+    techStack: [
+      "Python",
+      "Pandas",
+      "Scikit-learn",
+      "Numpy",
+      "Matplotlib",
+      "Surprise",
+      "TensorFlow",
+      "Flask"
+    ],
+    image: "euclidean_keybased.png",
+    link: "#",
+    type: "Personal Project",
+    view: true
+  },
+  {
+    title: "Stock Analytics & Prediction System",
+    description: "Utilized large datasets from Kaggle to build a predictive model for cryptocurrency and stock closing prices. Leveraged machine learning techniques, including multilinear regression, along with data analysis tools like Pandas, Numpy, and Matplotlib to identify patterns and predict future market trends, providing valuable insights for investors.",
+    techStack: [
+      "Python",
+      "Pandas",
+      "Numpy",
+      "Matplotlib",
+      "Scikit-learn",
+      "Multilinear Regression",
+      "Kaggle Datasets",
+      "Seaborn"
+    ],
+    image: "stocks.png",
+    link: "#",
+    type: "Personal Project",
+    view: true
+  }
 ];
+
 
 const Projects: React.FC = () => {
   return (
@@ -96,12 +139,14 @@ const Projects: React.FC = () => {
                   </span>
                 ))}
               </div>
-              <a
-                href={project.link}
-                className="inline-block px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-transform"
-              >
-                View Project
-              </a>
+              {project.view && (
+                <a
+                  href={project.link}
+                  className="inline-block px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-transform"
+                >
+                  View Project
+                </a>
+              )}
             </div>
           </motion.div>
         ))}
