@@ -7,7 +7,6 @@ import Journey from './components/journey';
 const App: React.FC = () => {
   return (
     <Router>
-      <InitializeRedirect />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
@@ -15,17 +14,6 @@ const App: React.FC = () => {
       </Routes>
     </Router>
   );
-};
-
-// Component that handles the redirect on load
-const InitializeRedirect: React.FC = () => {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    navigate('/'); // Redirect to Home ("/") path
-  }, [navigate]);
-
-  return null;
 };
 
 export default App;
