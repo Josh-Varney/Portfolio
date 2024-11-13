@@ -7,7 +7,7 @@ import { Navigate, useNavigate } from 'react-router-dom';
 const projects = [
   {
     title: 'Automotive Process Comparison Tool',
-    description: 'A full-stack tool designed to automate and streamline the comparison of complex process configurations across different company environments (Production, Staging, and Dev). Built using SQL Server, this tool integrates with multiple environments to optimize the comparison process and ensure consistent results across platforms.',
+    description: 'A full-stack tool designed to automate and streamline the comparison of complex process configurations across different company environments (Production, Staging, and Development). Built using SQL Server, this tool integrates with multiple environments to optimize the comparison process and ensure consistent results across platforms.',
     techStack: ['React', 'Node.js', 'Flask', 'Jinja2', 'SQL Server', 'GitLab', 'SPs', 'API Development'],
     image: 'tradeweb3.png',
     link: '#',
@@ -45,7 +45,7 @@ const projects = [
     title: 'Valid8ta Project',
     description: 'Developed a React and TypeScript app to upload, validate, and manage CSV data, integrating seamlessly with Microsoft Dataverse. Designed and implemented CI/CD pipelines with cached tests to accelerate build times and ensure smooth, consistent deployments.',
     techStack: ['React', 'TypeScript', 'Firebase', 'Dynamics 365', 'Data Management', 'Microsoft Azure', 'Dataverse'],
-    image: 'wasteaway.png',
+    image: 'valid8ta.png',
     link: '#',
     type: 'Company Project',
     view: false
@@ -98,6 +98,7 @@ const projects = [
 ];
 
 
+// Projects Component
 const Projects: React.FC = () => {
   const navigate = useNavigate();
   return (
@@ -111,13 +112,11 @@ const Projects: React.FC = () => {
       
       <div>
         <button
-          onClick={() => {
-            console.log("Button clicked"); // Debugging log
-            navigate('/');
-          }}
+          onClick={() => navigate('/')}
           className="absolute top-6 left-6 px-4 py-2 rounded-full bg-gradient-to-r from-teal-400 to-blue-500 text-white font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-transform flex items-center gap-2"
         >
           <FaArrowLeft />
+          Return
         </button>
       </div>
 
@@ -138,7 +137,8 @@ const Projects: React.FC = () => {
               </div>
               <img
                 src={project.image}
-                className="w-full h-60 object-cover rounded-t-3xl"
+                className="w-full h-60 object-cover object-center rounded-t-3xl"
+                alt={`${project.title} screenshot`}
               />
             </div>
             <div className="p-6">

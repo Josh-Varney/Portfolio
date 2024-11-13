@@ -64,10 +64,10 @@
 }
 
 .animate-slow-ping {
-  animation: slow-ping 10s infinite;
+  animation: slow-ping 5s infinite;
 }
 
 .animate-slow-pulse {
-  animation: slow-pulse 12s infinite;
+  animation: slow-pulse 6s infinite;
 }
 

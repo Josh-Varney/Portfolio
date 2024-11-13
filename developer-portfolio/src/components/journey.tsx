@@ -76,6 +76,7 @@ const Journey: React.FC = () => {
           className="absolute top-6 left-6 px-4 py-2 rounded-full bg-gradient-to-r from-teal-400 to-blue-500 text-white font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-transform flex items-center gap-2"
         >
           <FaArrowLeft />
+          Return
         </button>
       </div>
 
